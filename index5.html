@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Especial</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+        h1 {
+            color: #d63384;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #495057;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .heart {
+            font-size: 50px;
+            color: #d63384;
+        }
+        button {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c82373;
+        }
+    </style>
+    <!-- SweetAlert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hola, mi amor 💕</h1>
+        <p>Me encantaría acompañarte a tu universidad.</p>
+        <p class="heart">💖</p>
+        <button onclick="mostrarAlerta()">Solo Sí</button>
+    </div>
+
+    <script>
+        function mostrarAlerta() {
+            Swal.fire({
+                title: '¡Nos vemos pronto!',
+                text: 'Estoy emocionado/a por nuestra cita 💕',
+                icon: 'success',
+                confirmButtonText: '¡Genial!',
+                confirmButtonColor: '#d63384',
+                backdrop: `
+                    rgba(0,0,123,0.4)
+                    url("https://media.giphy.com/media/3o6ZtpxSZbQRRnwCKQ/giphy.gif")
+                    left top
+                    no-repeat
+                `
+            });
+        }
+    </script>
+</body>
+</html>
