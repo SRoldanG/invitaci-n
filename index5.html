@@ -6,37 +6,59 @@
     <title>Invitación Especial</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
             margin: 0;
             padding: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
         }
-        .container {
-            background-color: #fff;
+
+        /* Fondo de pantalla con desenfoque */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://wallpapers.com/images/featured/one-piece-c0pujiakubq5rwas.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: -1; /* Mantener en el fondo */
+        }
+
+        /* Tarjeta de invitación */
+        .content {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
             text-align: center;
             width: 300px;
         }
+
         h1 {
             color: #d63384;
             font-size: 24px;
             margin-bottom: 10px;
         }
+
         p {
             color: #495057;
             font-size: 18px;
             margin-bottom: 20px;
         }
+
         .heart {
             font-size: 50px;
             color: #d63384;
         }
+
         button {
             background-color: #d63384;
             color: white;
@@ -46,27 +68,31 @@
             font-size: 16px;
             cursor: pointer;
         }
+
         button:hover {
             background-color: #c82373;
         }
     </style>
-    <!-- SweetAlert CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <div class="container">
+    <!-- Fondo de pantalla difuminado -->
+    <div class="background"></div>
+
+    <!-- Tarjeta de invitación -->
+    <div class="content">
         <h1>Hola, mi amor 👩🏾‍🦱💕</h1>
         <p>Me encantaría acompañarte a tu universidad.</p>
+        <p>Si estas de acuerdo marca el si y no, no existen los no para mí</p>
         <p class="heart">💖</p>
-        <p>Marca con un si, si te gustaria que te acompañe, la opción no, no es válida</p>
         <button onclick="mostrarAlerta()">Solo Sí</button>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function mostrarAlerta() {
             Swal.fire({
                 title: '¡Nos vemos pronto!',
-                text: 'Estoy emocionado por verte💕',
+                text: 'Estoy emocionado por verte 💕',
                 icon: 'success',
                 confirmButtonText: '¡Genial!',
                 confirmButtonColor: '#d63384',
